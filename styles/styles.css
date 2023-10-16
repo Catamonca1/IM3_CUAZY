@@ -58,7 +58,7 @@ h2 {
 }
 
 
-.btn_search {
+#btn_search {
 
     font-family: Dela Gothic One;
     font-size: 36px;
@@ -79,7 +79,7 @@ h2 {
     transition-duration: 0.4s;
 }
 
-.btn_search:hover {
+#btn_search:hover {
     background-color: var(--orange);
     
 }
@@ -88,7 +88,7 @@ h2 {
 
 
 
-.btn_random {
+#btn_random {
 
     font-family: Dela Gothic One;
     font-size: 36px;
@@ -109,7 +109,7 @@ h2 {
     transition-duration: 0.4s;
 }
 
-.btn_random:hover {
+#btn_random:hover {
     background-color: var(--gelb);
     
 }
