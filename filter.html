@@ -17,39 +17,55 @@
 
 <body>
 
-    <img src="images/logo_cuazy.png" alt="Logo Cuazy" style="width: 250px; height: 224px;">
+    <header>
 
-   <h1>Suche in Zürich</h1>
+        <div class="logo">
+            <img src="images/logo_cuazy.png" alt="Logo Cuazy" style="width: 250px; height: 224px;">
+
+        </div>
+
+        <div class-="title">
+            <h1>Suche in Zürich</h1>
+
+        </div>
+
+
+    </header>
 
    <p>Filtere unten nach deinen Präferenzen und finde den richtigen Deutschkurs in der Stadt Zürich für dich!</p>
 
-   <form class="niveau_container" action="results.html">
-     <p>Niveau:</p>
+    <form id="formular_filter" action="results.html">
 
-        <input type="radio" id="a1" name="niveau" value="a1">
-        <label for="a1">A1</label><br>
+    
+        <div class="niveau_container">
+        <p>Niveau:</p>
 
-        <input type="radio" id="a2" name="niveau" value="a2">
-        <label for="a2">A2</label><br>
+            <input type="radio" id="a1" name="niveau" value="a1">
+            <label for="a1">A1</label><br>
 
-        <input type="radio" id="b1" name="niveau" value="b1">
-        <label for="b1">B1</label><br>
+            <input type="radio" id="a2" name="niveau" value="a2">
+            <label for="a2">A2</label><br>
 
-        <input type="radio" id="b2" name="niveau" value="b2">
-        <label for="b2">B2</label><br>
+            <input type="radio" id="b1" name="niveau" value="b1">
+            <label for="b1">B1</label><br>
 
-        <input type="radio" id="c1" name="niveau" value="c1">
-        <label for="c1">C1</label><br>
+            <input type="radio" id="b2" name="niveau" value="b2">
+            <label for="b2">B2</label><br>
 
-        <input type="radio" id="c2" name="niveau" value="c2">
-        <label for="c2">C2</label><br>
+            <input type="radio" id="c1" name="niveau" value="c1">
+            <label for="c1">C1</label><br>
 
+            <input type="radio" id="c2" name="niveau" value="c2">
+            <label for="c2">C2</label><br>
 
+        </div>
+        
+        <button class="btn_search_long" type="submit" value="submit">suchen</button>
 
    </form>
   
 
-   <button class="btn_search_long" type="button">suchen</button>
+   
    
 
 
