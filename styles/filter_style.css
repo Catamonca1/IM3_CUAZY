@@ -16,8 +16,17 @@ body {
     background-color: var(--rosa);
     width: 1440px;
     height: 1024px;
-    padding: 50px;
+    padding: 70px;
 }
+
+header {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
 
 h1 {
 
@@ -41,6 +50,10 @@ p {
     border: 4px solid #141414;
     background: var(--gelb);
     padding:20px;
+    margin-bottom: 20px;
+    font-family: futura;
+    color: var(--grau);
+    accent-color: var(--violet);
 }
 
 .btn_search_long {
