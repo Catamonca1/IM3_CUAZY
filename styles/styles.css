@@ -42,12 +42,9 @@ h2 {
 
 .container_buttons {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     align-content: center;
-    width: 65%;
-    overflow: auto;
+    width: 70%;
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
@@ -58,6 +55,8 @@ h2 {
 .container_buttons div {
     width: 500px;
     height: 100px;
+    align-items: center;
+    
    
 
 }
