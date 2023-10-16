@@ -43,18 +43,28 @@ p {
 }
 
 .niveau_container{
-    width: 465px;
-    height: 200px;
-    flex-shrink: 0;
+    width: 400px;
+    height: 150px;
     border-radius: 28px;
     border: 4px solid #141414;
     background: var(--gelb);
-    padding:20px;
+    padding:15px;
     margin-bottom: 20px;
     font-family: futura;
+    line-height: 30px;
     color: var(--grau);
     accent-color: var(--violet);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
 }
+
+.niveau { grid-area: 1 / 1 / 2 / 4; }
+.radio_a { grid-area: 2 / 1 / 3 / 2; }
+.radio_b { grid-area: 2 / 2 / 3 / 3; }
+.radio_c { grid-area: 2 / 3 / 3 / 4; } 
 
 .btn_search_long {
 
