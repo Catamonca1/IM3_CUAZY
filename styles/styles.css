@@ -14,12 +14,11 @@
 
 body {
     background-color: var(--violet);
-    width: 1440px;
-    height: 1024px;
     padding: 50px;
 }
 
 img {
+    width: 50%;
     padding-top: 60px;
     display: block;
     margin-left: auto;
@@ -31,8 +30,8 @@ h2 {
     font-size: 36px;
     color: var(--grau);
     text-align: center;
-    width: 680px;
-    height: 140px;
+    width: 60%;
+    height: auto;
     padding: 50px;
     display: block;
     margin-left: auto;
@@ -113,3 +112,45 @@ h2 {
     background-color: var(--gelb);
     
 }
+
+@media screen and (max-width: 600px) {
+    body {
+      padding: 30px;
+    }
+
+    img {
+
+        width: 80%;
+    }
+
+    h2{
+
+        width: auto;
+        padding:0%;
+        font-size: 23px;
+        padding-top: 10px;
+    }
+
+    .container_buttons {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+       
+    }
+
+
+    #btn_search {
+
+        font-size: 25px;
+    }
+
+
+    #btn_random {
+
+        font-size: 25px;
+
+    }
+
+
+  }
+  
