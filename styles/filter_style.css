@@ -67,6 +67,18 @@ p {
     grid-area: 1 / 1 / 4 / 2; 
 } 
 
+#field_zipCode {
+    width: 400px;
+    border-radius: 28px;
+    border: 3px solid #141414;
+    background: var(--gelb, #EAFC88);
+    font-family: futura;
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}
+
 #niveau_container{
     width: 400px;
     height: 130px;
@@ -94,7 +106,7 @@ p {
 
 
 #priceRangeDropdown {
-    width: 435px;
+    width: 430px;
     border-radius: 28px;
     border: 3px solid #141414;
     background: var(--gelb, #EAFC88);
