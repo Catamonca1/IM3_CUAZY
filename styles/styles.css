@@ -121,10 +121,10 @@ h2 {
         width: 80%;
     }
 
-    h2{
+    h2 {
 
         width: auto;
-        padding:0%;
+        padding: 0%;
         font-size: 23px;
         padding-top: 10px;
     }
@@ -149,12 +149,5 @@ h2 {
 
     }
 
-
-}
-
-
-#map {
-    height: 700px;
-    width: 100%;
 
 }
