@@ -32,81 +32,86 @@
 
     </header>
 
-   <p>Filtere unten nach deinen Präferenzen und finde den richtigen Deutschkurs in der Stadt Zürich für dich!</p>
+    <p>Filtere unten nach deinen Präferenzen und finde den richtigen Deutschkurs in der Stadt Zürich für dich!</p>
 
-   <div id="container_filter">
+    <div id="container_filter">
 
-        <div id="googleMap">Map</div>
+        <div id="map"></div>
 
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoZeBthUMT-d6b9Gr0-jzvDiH-EiH5Iz0&callback=initMap">
+            </script>
+
+        <script src="/scripts/map.js"></script>
 
         <div id="div_formular">
-        <form id="formular_filter" action="results.html">
+            <form id="formular_filter" action="results.html">
 
-            <div id="field_zipCode">
-                <label for="zipCode">ZIP Code:</label>
-                <input type="text" id="zipCode" name="zipCode">
-            </div>
-
-    
-            <div id="niveau_container">
-                 <div id="niveau">
-                 <p>Niveau:</p>
-
-                 </div>
-
-             <div id="radio_a">
-
-                <input type="radio" id="a1" name="niveau" value="a1">
-                <label for="a1">A1</label><br>
-
-                <input type="radio" id="a2" name="niveau" value="a2">
-                <label for="a2">A2</label><br>
-
-             </div>
-        
-
-             <div id="radio_b">
-                <input type="radio" id="b1" name="niveau" value="b1">
-                <label for="b1">B1</label><br>
-
-                <input type="radio" id="b2" name="niveau" value="b2">
-                <label for="b2">B2</label><br>
+                <div id="field_zipCode">
+                    <label for="zipCode">ZIP Code:</label>
+                    <input type="text" id="zipCode" name="zipCode">
+                </div>
 
 
-             </div>
+                <div id="niveau_container">
+                    <div id="niveau">
+                        <p>Niveau:</p>
 
-             <div id="radio_c">
-                <input type="radio" id="c1" name="niveau" value="c1">
-                <label for="c1">C1</label><br>
-    
-                <input type="radio" id="c2" name="niveau" value="c2">
-                <label for="c2">C2</label><br>
+                    </div>
 
-             </div>
+                    <div id="radio_a">
 
-           
+                        <input type="radio" id="a1" name="niveau" value="a1">
+                        <label for="a1">A1</label><br>
 
-            </div>
+                        <input type="radio" id="a2" name="niveau" value="a2">
+                        <label for="a2">A2</label><br>
 
-         <div id="dropdown_price">
-
-            <select id="priceRangeDropdown">
-                <option value="">Select Price Range</option>
-            </select>
+                    </div>
 
 
-         </div>
-        
-            <button id="btn_search_long" type="submit" value="submit">suchen</button>
+                    <div id="radio_b">
+                        <input type="radio" id="b1" name="niveau" value="b1">
+                        <label for="b1">B1</label><br>
 
-        </form>
+                        <input type="radio" id="b2" name="niveau" value="b2">
+                        <label for="b2">B2</label><br>
+
+
+                    </div>
+
+                    <div id="radio_c">
+                        <input type="radio" id="c1" name="niveau" value="c1">
+                        <label for="c1">C1</label><br>
+
+                        <input type="radio" id="c2" name="niveau" value="c2">
+                        <label for="c2">C2</label><br>
+
+                    </div>
+
+
+
+                </div>
+
+                <div id="dropdown_price">
+
+                    <select id="priceRangeDropdown">
+                        <option value="">Select Price Range</option>
+                    </select>
+
+
+                </div>
+
+                <button id="btn_search_long" type="submit" value="submit">suchen</button>
+
+            </form>
         </div>
 
-   </div>
-  
+    </div>
 
-   
-   
+
+
+
 
 
     <script type="module" src="config/config.js"></script>
