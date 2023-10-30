@@ -33,8 +33,12 @@ h1 {
     color: var(--grau);
 }
 
-p {
+.lead {
     width: 500px;
+}
+
+p {
+
     font-family: Futura;
     font-size: 20px;
     color: var(--grau);
@@ -54,7 +58,7 @@ p {
     grid-area: 1 / 2 / 4 / 3; 
     width: 500px;
     height: 300px;
-    border-radius: 28px;
+    border-radius: 30px;
     border: 3px solid #141414;
     background: var(--gelb);
     padding:15px;
@@ -69,7 +73,7 @@ p {
 
 #field_zipCode {
     width: 400px;
-    border-radius: 28px;
+    border-radius: 30px;
     border: 3px solid #141414;
     background: var(--gelb, #EAFC88);
     font-family: futura;
@@ -107,7 +111,7 @@ p {
 
 #priceRangeDropdown {
     width: 430px;
-    border-radius: 28px;
+    border-radius: 30px;
     border: 3px solid #141414;
     background: var(--gelb, #EAFC88);
     font-family: futura;
