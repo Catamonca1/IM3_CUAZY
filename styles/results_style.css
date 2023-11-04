@@ -1,0 +1,111 @@
+:root {
+    --violet: rgba(189, 180, 255, 1);
+    --gelb: rgba(255, 252, 203, 1);
+    --gruen: rgba(234, 252, 136, 1);
+    --orange: rgba(255, 185, 133, 1);
+    --grau: rgba(20, 20, 20, 1);
+    --rosa: rgba(237, 181, 247, 1);
+}
+
+
+
+
+body {
+    background-color: var(--violet);
+    padding: 60px 100px;
+}
+
+img {
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+h2 {
+    font-family: Dela Gothic One;
+    font-size: 36px;
+    color: var(--grau);
+    text-align: center;
+    width: 60%;
+    height: auto;
+    padding: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+#btn_search {
+
+    font-family: Dela Gothic One;
+    font-size: 36px;
+    color: var(--grau);
+    text-align: center;
+    display: flex;
+    width: fit-content;
+    height: 52px;
+    padding: 30px 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 3px solid #141414;
+    background: var(--gruen);
+    box-shadow: 4px 8px 0px 0px #141414;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#btn_search:hover {
+    background-color: var(--orange);
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 30px;
+    }
+
+    img {
+
+        width: 80%;
+    }
+
+    h2{
+
+        width: auto;
+        padding:0%;
+        font-size: 23px;
+        padding-top: 10px;
+    }
+
+    .container_buttons {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+
+    }
+
+
+    #btn_search {
+
+        font-size: 25px;
+    }
+
+
+
+
+}
+
