@@ -12,12 +12,11 @@
 
 body {
     background-color: var(--violet);
-    padding: 50px;
+    padding: 60px 100px;
 }
 
 img {
     width: 50%;
-    padding-top: 60px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -74,6 +73,7 @@ h2 {
     background: var(--gruen);
     box-shadow: 4px 8px 0px 0px #141414;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 #btn_search:hover {
@@ -104,6 +104,7 @@ h2 {
     background: var(--rosa);
     box-shadow: 4px 8px 0px 0px #141414;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 #btn_random:hover {
@@ -153,8 +154,3 @@ h2 {
 }
 
 
-#map {
-    height: 700px;
-    width: 100%;
-
-}
