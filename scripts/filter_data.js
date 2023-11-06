@@ -3,7 +3,7 @@ const form = document.querySelector('form');
 
 // zip code filter
 const zipInputField = document.querySelector('#zipCode')
-zipInputField.value = '';
+zipInputField.value = ''; //reset the value of the input field to empty string
 let selectedZipCodeValue = undefined;
 
 // course niveau filter
@@ -50,7 +50,8 @@ form.addEventListener('submit', function (e) {
     window.location.href = targetURLWithParams;
 });
 
-//create the params that will be used to open new page containing search params
+//create the params that will be used to open new page containing search params 
+//Die Suchparameter werden in der URL gespeichert, damit sie beim laden der results.html Seite verfügbar sind
 let createURLSearchParameters = () => {
     const queryParams = new URLSearchParams();
     queryParams.set("zipCodeValue", selectedZipCodeValue);

@@ -4,6 +4,7 @@ import { supa } from "../config/config.js";
 // helper functions to run the page flow
 
 //get the query params with values from the url
+//Die Suchparameter werden aus der URL ausgelesen und in einem Array gespeichert
 function getQueryParams() {
     const queryParams = new URLSearchParams(window.location.search);
     const values = [];
