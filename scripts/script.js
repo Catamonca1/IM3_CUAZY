@@ -1,4 +1,4 @@
-import { supa } from "../config/config.js";
+/*import { supa } from "../config/config.js";
 
 
 const form = document.querySelector('form');
@@ -51,3 +51,4 @@ form.addEventListener('submit', function (e) {
         writeSearchResultsToHtml(school[0]);
     });
 });
+*/
