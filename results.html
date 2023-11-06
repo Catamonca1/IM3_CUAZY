@@ -5,6 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Didact+Gothic&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/results_style.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <img src="images/logo_cuazy.png" alt="Logo Cuazy" style="width: 250px; height: 224px;"
+                onclick="window.location.href='index.html'">
+
+        </div>
+
+        <div class="title">
+            <h3>Folgende Schulen haben wir für dich gefunden &#128576</h3>
+        </div>
+
+
+    </header>
+
+    <section class='result_container'>
+        <div class="school_list_container">
+            <!-- the html content is written by logic from script "write_data" (template) -->
+        </div>
+        <div id="map"></div>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoZeBthUMT-d6b9Gr0-jzvDiH-EiH5Iz0&callback=initMap"></script>
+        <script src="/scripts/map.js"></script>
+
+    </section>
+
+    <script type="module" src="config/config.js"></script>
+    <script type="module" src="/scripts/write_data.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUAZY</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,4 +89,4 @@
 
 </body>
 
-</html>
+</html> -->
