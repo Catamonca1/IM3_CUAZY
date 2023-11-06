@@ -1,0 +1,118 @@
+:root {
+    --violet: rgba(189, 180, 255, 1);
+    --gelb: rgba(255, 252, 203, 1);
+    --gruen: rgba(234, 252, 136, 1);
+    --orange: rgba(255, 185, 133, 1);
+    --grau: rgba(20, 20, 20, 1);
+    --rosa: rgba(237, 181, 247, 1);
+}
+
+body {
+    background-color: var(--violet);
+    padding: 50px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+.result_container {
+    display: flex;
+}
+
+h1 {
+    font-family: futura;
+}
+
+div {
+    font-family: futura;
+    display: flex;
+    gap: 1rem;
+}
+
+ul {
+    padding: 0;
+}
+
+p {
+    font-family: futura;
+}
+
+.main_list_container {
+    width: 100%;
+    padding: 0;
+}
+
+.main_list_item_container {
+    list-style: none;
+    margin-bottom: 1rem;
+    /* margin: 0 0 1rem 20rem; */
+}
+
+.school_list_container {
+    width: 50%;
+}
+
+.item_header {
+    width: 15%;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.item_body {
+    width: fit-content;
+    white-space: nowrap;
+    align-self: flex-end;
+}
+
+.item_body_courselist {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.item_body_courselist_header {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.course_item_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0;
+}
+
+.course_item_price_container {
+    display: flex;
+}
+
+.google_map_container {
+    width: 40%;
+}
+
+#map {
+    width: 50%;
+}
+
+#googleMap { 
+    grid-area: 1 / 2 / 4 / 3; 
+    width: 500px;
+    height: 300px;
+    border-radius: 28px;
+    border: 3px solid #141414;
+    background: var(--gelb);
+    padding:15px;
+    margin-bottom: 20px;
+    font-family: futura;
+}
+
+.infowindow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
