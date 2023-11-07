@@ -126,11 +126,11 @@ const createResultListHtml = async (data) => {
         template += `
         <li class="main_list_item_container">
           <div class='result_item_container'>
-            <div class='item_header'>Schule:</div>
+            <div class='item_header'>School:</div>
             <div class='item_body'>${school.name}</div>
           </div>
           <div class='result_item_container'>
-            <div class='item_header'>Addresse:</div>
+            <div class='item_header'>Address:</div>
             <div class='item_body'>${school.street_name} ${school.street_number}, ${school.zip_code} ${school.city}</div>
           </div>
           <div class='result_item_container'>
@@ -154,11 +154,11 @@ async function getAllCourses(data) {
       if (school.courses) {
         const coursesTemplate = [`
         <div class="result_item_container">
-            <div class="item_header">Kursangebot:</div>
+            <div class="item_header">Courses:</div>
             <div class="item_body_courselist">
                 <div class="item_body_courselist_header">
-                    <div>Niveau</div>
-                    <div>Kosten</div>
+                    <div>Level</div>
+                    <div>Cost</div>
                 </div>
                 <ul>`];
         for (const course of school.courses) {
@@ -166,7 +166,7 @@ async function getAllCourses(data) {
           coursesTemplate.push(`
             <li class="course_item_container">
               <div class="course_item_name_container">${course.name}</div>
-              <div class="course_item_price_container">${coursePrice ? coursePrice.price + ".-" : 'Preis unbekannt'}</div>
+              <div class="course_item_price_container">${coursePrice ? coursePrice.price + ".-" : 'Price unknown'}</div>
             </li>
           `);
         }
