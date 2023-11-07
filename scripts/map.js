@@ -23,6 +23,7 @@ function createMarkers(data) {
                 lng: parseFloat(school.lng),
             },
             map: map,
+            icon: "images/marker.png",
             // add more options if you want
         });
 
