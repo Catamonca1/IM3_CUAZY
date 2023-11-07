@@ -32,7 +32,7 @@ let writeSearchResultsToHtml = (school) => {
     } else {
         template = `
         <div class="schoolContainer">
-        <div>Keine Schule für diesen ZipCode gefunden</div>
+        <div>No school found for this ZipCode</div>
         </div>`
 
     }
