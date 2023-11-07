@@ -14,15 +14,18 @@
 
 body {
     background-color: var(--rosa);
-    padding: 40px 150px;
+    padding: 50px;
+    text-align: center;
+    
 }
 
-header {
 
+
+header {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -30,13 +33,14 @@ header {
 h1 {
 
     font-family: Dela Gothic One;
-    font-size: 64px;
+    font-size: 50px;
     color: var(--grau);
+    text-align: center;
 }
 
 .lead {
-    width: 40%;
-    padding-bottom: 20px;
+    width: 60%;
+    text-align: center;
 }
 
 p {
@@ -44,6 +48,9 @@ p {
     font-family: Futura;
     font-size: 20px;
     color: var(--grau);
+    text-align: center;
+    margin-bottom: 2rem;
+    
 }
 
 .logo {
@@ -53,30 +60,30 @@ p {
 /* form starts */
 
 #container_filter {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    
     
 }
 
 
-#div_formular { 
-    grid-area: 1 / 1 / 4 / 2; 
-} 
 
 
 #field_zipCode {
-    width: 70%;
+    width: 95%;
     border-radius: 30px;
     border: 3px solid #141414;
     background: var(--gelb, #EAFC88);
     font-family: futura;
+    color: var(--grau);
+    text-align: left;
     font-size: 20px;
-    padding: 12px 15px;
-    margin-bottom: 20px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
     appearance: none;
 
 }
@@ -98,14 +105,13 @@ input[type="text"]:focus {
 
 
 #niveau_container{
-    width: 72%;
+    width: 95%;
     height: auto;
     border-radius: 28px;
     border: 3px solid #141414;
     background: var(--gelb);
-    padding-left: 15px;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
     font-family: futura;
     line-height: 30px;
     color: var(--grau);
@@ -118,6 +124,10 @@ input[type="text"]:focus {
 }
 
 #niveau { 
+    text-align: left;
+    font-size: 20px;
+    font-family: futura;
+    color: var(--grau);
     grid-area: 1 / 1 / 2 / 4;
 
 }
@@ -128,14 +138,16 @@ input[type="text"]:focus {
 
 
 #priceRangeDropdown {
-    width: 76%;
+    width: 100%;
     border-radius: 30px;
     border: 3px solid #141414;
     background: var(--gelb, #EAFC88);
     font-family: futura;
+    color: var(--grau);
     font-size: 20px;
-    padding: 12px 15px;
-    margin-bottom: 40px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    align-self: center;
 
 }
 
@@ -152,7 +164,7 @@ select {
     color: var(--grau);
     text-align: center;
     display: flex;
-    width: 75%;
+    width: 100%;
     height: 52px;
     padding: 20px 40px;
     margin-top: 20px;
@@ -176,32 +188,17 @@ select {
 
 /* form end */
 
-#map {
-    height: 500px;
-    width: 100%;
 
-}
-
-#results { 
-    grid-area: 1 / 2 / 4 / 3; 
-    width: 100%;
-    height: auto;
-   
-
-}
 
 @media screen and (max-width: 600px) {
     body {
         padding: 20px 30px;
-        
         justify-content: center;
     }
 
     header {
 
-        display: block;
         width: 100%;
-    
     }
 
     .logo{
@@ -220,7 +217,7 @@ select {
         width: auto;
         padding:0%;
         font-size: 30px;
-        padding-top: 20px;
+        padding-top: 1.5rem;
         text-align: center;
         
     }
@@ -229,13 +226,14 @@ select {
         width: 100%;
         justify-content: center;
         text-align: center;
-        padding-top: 20px;
     }
 
    
 
     #container_filter {
-        display: block;
+        
+        width: 100%;
+        padding: 0;
     }
 
     #field_zipCode {
@@ -251,7 +249,7 @@ select {
     }
 
     #niveau_container{
-        width: 94%;
+        width: 90%;
         height: auto;
      
     }
@@ -262,8 +260,6 @@ select {
         font-size: 30px;
         width: 100%;
     }
-
-
 
 
 
