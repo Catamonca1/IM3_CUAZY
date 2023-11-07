@@ -12,12 +12,29 @@ body {
     padding: 50px;
 }
 
-header {
+/*header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
- }
+}*/
+
+header {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem;
+}
+
+h3 {
+    font-family: Dela Gothic One;
+    font-size: 35px;
+    color: var(--grau);
+    width: 50%;
+    
+}
 
 .result_container {
     display: flex;
@@ -25,10 +42,13 @@ header {
 
 h1 {
     font-family: futura;
+    color: var(--grau);
 }
 
 div {
     font-family: futura;
+    font-size: 20px;
+    color: var(--grau);
     display: flex;
     gap: 1rem;
 }
@@ -39,16 +59,23 @@ ul {
 
 p {
     font-family: futura;
+    font-size: 20px;
+    color: var(--grau);
 }
 
 .main_list_container {
     width: 100%;
-    padding: 0;
+    padding: 1rem;
+    
 }
 
 .main_list_item_container {
     list-style: none;
     margin-bottom: 1rem;
+    background-color: var(--gelb);
+    border-radius: 28px;
+    border: 3px solid #141414;
+    padding: 1rem;
     /* margin: 0 0 1rem 20rem; */
 }
 
@@ -97,22 +124,42 @@ p {
 
 #map {
     width: 50%;
-}
-
-#googleMap { 
-    grid-area: 1 / 2 / 4 / 3; 
-    width: 500px;
-    height: 300px;
+    height: 700px;
     border-radius: 28px;
     border: 3px solid #141414;
-    background: var(--gelb);
-    padding:15px;
-    margin-bottom: 20px;
-    font-family: futura;
 }
+
+
 
 .infowindow {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+}
+
+#btn_search {
+
+    font-family: Dela Gothic One;
+    font-size: 36px;
+    color: var(--grau);
+    text-align: center;
+    display: flex;
+    width: fit-content;
+    height: 52px;
+    padding: 20px 60px 26px 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 3px solid #141414;
+    background: var(--rosa);
+    box-shadow: 4px 8px 0px 0px #141414;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#btn_search:hover {
+    background-color: var(--orange);
+
 }
