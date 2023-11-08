@@ -17,6 +17,7 @@ function createMarkers(data) {
 
     // Loop through your filteredData array and create markers for each school
     data.forEach(school => {
+        
         const marker = new google.maps.Marker({
             position: {
                 lat: parseFloat(school.lat),
