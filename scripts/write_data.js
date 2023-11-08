@@ -139,7 +139,7 @@ const createResultListHtml = async (data) => {
           </div>
           <div class='result_item_container'>
             <div class='item_header'>Website:</div>
-            <div class='item_body'>${school.website}</div>
+            <a href= "https://${school.website}/"><div class='item_body'>${school.website}</div></a>
           </div>
           ${coursesTemplate[index]}
         </li>`;
@@ -205,6 +205,7 @@ function createMarkers(data) {
                 lng: parseFloat(school.lng),
             },
             map: map,
+            icon: "images/marker.png",
             // add more options if you want
         });
 
@@ -214,7 +215,7 @@ function createMarkers(data) {
             const infoWindow = new google.maps.InfoWindow({
                 content: `<div class="infowindow">
                             <strong>${school.name}</strong>
-                            <a href="school.website"><div>${school.website}</div></a>
+                            <a href= "https://${school.website}/"><div>${school.website}</div></a>
                             <div>${school.telephone}</div>
                            </div>`
             });
