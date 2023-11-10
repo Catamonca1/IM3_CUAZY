@@ -179,6 +179,10 @@ p {
         padding: 0;
     }
 
+    .item_body {
+        white-space: normal;
+    }
+
     .logo{
         
         text-align: center;
@@ -214,6 +218,7 @@ p {
         align-items: center;
         padding: 0;
     }
+    
 
     .school_list_container {
         width: 100%;
@@ -229,6 +234,7 @@ p {
         display: block;
         padding: 0;
         width: 100%;
+        white-space: normal;
     }
 
    
