@@ -15,7 +15,7 @@ function createMarkers(data) {
         console.log('inited map')
     }
 
-    // Loop through your filteredData array and create markers for each school
+    //loop through your filteredData array and create markers for each school
     data.forEach(school => {
         
         const marker = new google.maps.Marker({
@@ -25,7 +25,7 @@ function createMarkers(data) {
             },
             map: map,
             icon: "images/marker.png",
-            // add more options if you want
+            //add more options if you want
         });
 
         // if you want, you can add an event listener to the marker, 
