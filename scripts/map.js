@@ -28,7 +28,7 @@ function createMarkers(data) {
             //add more options if you want
         });
 
-        // if you want, you can add an event listener to the marker, 
+        // you can add an event listener to the marker, 
         // f.e.: to open an info window when clicked :)
         marker.addListener('click', function () {
             const infoWindow = new google.maps.InfoWindow({
