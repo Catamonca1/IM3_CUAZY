@@ -4,7 +4,6 @@ import { supa } from "../config/config.js";
 // helper functions to run the page flow
 
 //get the query params with values from the url
-//Die Suchparameter werden aus der URL ausgelesen und in einem Array gespeichert
 function getQueryParams() {
     const queryParams = new URLSearchParams(window.location.search);
     const values = [];
@@ -28,12 +27,11 @@ async function getSchoolData() {
     }
 }
 
-const applyFilters = (data) => {
+const applyFilters = (data, queryParams) => {
 
-    const queryParams = getQueryParams();
     let filteredData = data;
 
-    // Filter by Zip
+    //filter by Zip if specified, otherwise check next filter parameter
     if (queryParams[0].value != "undefined") {
        
         const newfilteredData = filteredData.filter(school => {
@@ -43,7 +41,7 @@ const applyFilters = (data) => {
         filteredData = newfilteredData;
     }
 
-    // Filter by course name
+    //filter by course name if specified, otherwise check next filter parameter
     if (queryParams[1].value != "undefined") {
 
         const newfilteredData = filteredData.filter(school =>
@@ -53,19 +51,15 @@ const applyFilters = (data) => {
         filteredData = newfilteredData;
     }
 
-    //filter price range
+    //filter price range if specified, otherwise check next filter parameter
     if (queryParams[2].value !== "undefined") {
-        console.log('queryParam obj: ', queryParams)
-        console.log('queryParam obj value 3:', queryParams[2].value)
 
         let priceRange = getPriceRange(queryParams[2].value);
-        console.log(priceRange)
 
         const minPrice = priceRange[0];
         const maxPrice = priceRange[1];
 
         const newfilteredData = filteredData.filter(school => {
-            console.log('school: ', school)
             return school.school_courses.some(course => {
                 const price = course.price;
                 return price >= minPrice && price <= maxPrice;
@@ -150,6 +144,8 @@ const createResultListHtml = async (data) => {
   };
 
 async function getAllCourses(data) {
+
+    //create async promises for each school html template. Until the promise will be resolved it can be awaited. This way the process flow can be controlled
     const coursesPromises = data.map(async school => {
       if (school.courses) {
         const coursesTemplate = [`
@@ -176,7 +172,7 @@ async function getAllCourses(data) {
         </div>`);
         return coursesTemplate.join('');
       }
-      return ''; // if there are no courses, return an empty string
+      return ''; //if there are no courses, an empty string or in this business case an empty template is returned
     });
      
     return await Promise.all(coursesPromises);
@@ -224,15 +220,34 @@ function createMarkers(data) {
     });
 }
 
-
 // *************************************************************************************************
 // page logic flow (process-flow when page is loaded)   
 getSchoolData().then(result => {
-    const filteredData = applyFilters(result);
+
+    //get the query params from the url
+    const queryParams = getQueryParams();
+    let filteredData = [];
+
+    //used in case of "random" button was clicked, picking a random school from the fetched school array
+    if (queryParams[0].value === "random" && queryParams[1].value === "random" && queryParams[2].value === "random") {
+        const random = Math.floor(Math.random() * result.length);
+        filteredData.push(result[random]);
+
+    //in any search case, the fetched school array is filtered according the query params
+    } else { 
+        filteredData = applyFilters(result, queryParams);
+    }
+    
+    // create the google map markers for the filtered schools
     createMarkers(filteredData);
+
+    // create and return the HTML template based on results
     return createResultListHtml(filteredData);
 }).then(template => {
+
+    // write the HTML template to the DOM
     writeTemplateToHtml(template);
 }).catch(error => {
-    console.log(error)
+    // catch an log the error in the console log if something goes wrong
+    console.log("error:", error);
 });
