@@ -232,6 +232,8 @@ getSchoolData().then(result => {
     if (queryParams[0].value === "random" && queryParams[1].value === "random" && queryParams[2].value === "random") {
         const random = Math.floor(Math.random() * result.length);
         filteredData.push(result[random]);
+        var refreshButtonElement = document.getElementById("isVisible");
+        refreshButtonElement.style.visibility = "visible";
 
     //in any search case, the fetched school array is filtered according the query params
     } else { 

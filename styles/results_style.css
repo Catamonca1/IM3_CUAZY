@@ -138,7 +138,7 @@ p {
 
 
 
-#btn_search {
+.btn_search {
 
     font-family: Dela Gothic One;
     font-size: 36px;
@@ -160,9 +160,19 @@ p {
     cursor: pointer;
 }
 
-#btn_search:hover {
+.btn_search:hover {
     background-color: var(--orange);
+}
 
+#isVisible {
+    visibility: hidden;
+}
+
+.button_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 1000px) {
@@ -237,25 +247,14 @@ p {
         white-space: normal;
     }
 
-   
-
-
     #map {
         width: 100%;
-        height: 500px;
-        
-        
+        height: 500px;        
     }
-
-
-    #btn_search {
-
+    .btn_search {
         font-size: 25px;
         width: 100%;
         padding: 15px;
         margin-top: 2rem;
     }
-
-
-
 }
