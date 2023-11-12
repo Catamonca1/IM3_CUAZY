@@ -172,7 +172,7 @@ async function getAllCourses(data) {
         </div>`);
         return coursesTemplate.join('');
       }
-      return ''; //if there are no courses, an empty string or in this business case an empty template is returned
+      return ''; //if there are no courses, an empty string or in this case an empty template is returned
     });
      
     return await Promise.all(coursesPromises);
@@ -205,7 +205,7 @@ function createMarkers(data) {
             // add more options if you want
         });
 
-        // if you want, you can add an event listener to the marker, 
+        // you can add an event listener to the marker, 
         // f.e.: to open an info window when clicked :)
         marker.addListener('click', function () {
             const infoWindow = new google.maps.InfoWindow({
